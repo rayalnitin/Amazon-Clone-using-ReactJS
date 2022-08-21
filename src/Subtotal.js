@@ -10,6 +10,10 @@ function Subtotal() {
     const navigate = useNavigate();
     const [ {basket} , dispatch ] = useStateValue();
 
+    const handleClick = () => {
+        navigate('/payment')
+    }
+
   return (
     <div className='subtotal'>
         <CurrencyFormat
@@ -29,7 +33,7 @@ function Subtotal() {
             thousandSeparator={true}
             prefix={"₹"}
             />
-            <button onClick={ e=> navigate('/payment')}> 
+            <button onClick={handleClick}> 
                  Proceed to Checkout
             </button>
     </div>
